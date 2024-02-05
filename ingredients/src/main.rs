@@ -20,13 +20,10 @@ fn main() {
     io::stdin().read_line(&mut input).unwrap();
 
     //Cleaning input
-    let check_food1: String = input.trim().parse().unwrap();
-
-    //Converting input to str
-    let check_food2 = check_food1.as_str();
+    let check_food: String = input.trim().parse().unwrap();
 
     //Calling the ingredients for food
-    let ingredients = food_match(check_food2);
+    let ingredients = food_match(check_food.as_str());
 
     //Printing ingredients
     println!("The ingredients for {} ", input);
